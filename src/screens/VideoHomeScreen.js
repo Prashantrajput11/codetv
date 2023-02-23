@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Outlet } from "react-router-dom";
 import Header from "../components/Header";
 import Sidebar from "../components/Sidebar";
 import VideoCard from "../components/VideoCard";
@@ -22,9 +23,9 @@ const VideoHomeScreen = () => {
 	}
 	return (
 		<div className="p-4">
-			<Header showSidebar={showSidebar} setShowSidebar={setShowSidebar} />
+			<Header />
 			<div className="flex ">
-				<div className="">
+				<div className="flex">
 					<Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar} />
 				</div>
 				<div className="flex flex-wrap  rounded-full ml-8">
@@ -33,6 +34,7 @@ const VideoHomeScreen = () => {
 							return <VideoCard videoData={video} />;
 						})}
 				</div>
+				<Outlet />
 			</div>
 		</div>
 	);

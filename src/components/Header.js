@@ -4,6 +4,7 @@ import React from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { FaYoutube } from "react-icons/fa";
 import { FaMicrophone } from "react-icons/fa";
+import { NavLink } from "react-router-dom";
 
 import Search from "./Search";
 import ProfileCta from "./ProfileCta";
@@ -17,7 +18,9 @@ const Header = ({ showSidebar, setShowSidebar }) => {
 					<RxHamburgerMenu color={"#fff"} size={"2em"} />
 				</div>
 				<FaYoutube color={"red"} size={"2em"} />
-				<h3 className="text-white ml-2 font-bold text-xl">CodeTv.</h3>
+				<NavLink to="/">
+					<h3 className="text-white ml-2 font-bold text-xl">CodeTv.</h3>
+				</NavLink>
 			</div>
 			<Search />
 
